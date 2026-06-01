@@ -10,7 +10,7 @@ import ManagerDashboard from './pages/manager/Dashboard'
 import ManagerPayments from './pages/manager/Payments'
 import ManagerTickets from './pages/manager/Tickets'
 import ManagerAnnouncements from './pages/manager/Announcements'
-
+import Register from './pages/auth/Register'
 function App() {
     return (
         <BrowserRouter>
@@ -25,6 +25,7 @@ function App() {
                 <Route path="/manager/payments" element={<PrivateRoute role="manager"><ManagerPayments /></PrivateRoute>} />
                 <Route path="/manager/tickets" element={<PrivateRoute role="manager"><ManagerTickets /></PrivateRoute>} />
                 <Route path="/manager/announcements" element={<PrivateRoute role="manager"><ManagerAnnouncements /></PrivateRoute>} />
+                <Route path="/register" element={<Register />} />
             </Routes>
         </BrowserRouter>
     )

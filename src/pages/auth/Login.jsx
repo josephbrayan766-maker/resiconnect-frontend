@@ -1,7 +1,7 @@
 import './Login.css'
 import { useState } from 'react'
 import { useAuth } from '../../context/AuthContext'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, Link } from 'react-router-dom'
 import api from '../../services/api'
 
 function Login() {
@@ -46,6 +46,9 @@ function Login() {
                 />
                 <a href="#" className="forgot-password">Mot de passe oublié ?</a>
                 <button type="submit" onClick={handleLogin}>Accéder</button>
+                <Link to="/register" className="forgot-password" style={{ textAlign: 'center', display: 'block', marginTop: '16px' }}>
+                    Pas encore de compte ? S'inscrire
+                </Link>
             </div>
         </div>
     )
